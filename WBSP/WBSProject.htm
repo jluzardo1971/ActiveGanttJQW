@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ActiveGanttJQW - Work Breakdown Structure (WBS) Project Management Example</title>
+    <script src="../Scripts/jquery-2.0.3.js" type="text/javascript"></script>
+    <script src="../Scripts/jquery.ui.widget.js" type="text/javascript"></script>
+    <script src="../Scripts/AGJQW_3_2_0D.min.js" type="text/javascript"></script>
+    <script src="WBSProject.js" type="text/javascript"></script>
+    <style>
+        html,body {
+            height:100%;
+        }
+        input 
+        {
+            border: 1px solid #C0C0C0;
+            padding: 4px;
+            margin-left: 4px;
+            margin-bottom: 0px;
+        }
+        .Toolbar
+        {
+            border: 1px solid #C0C0C0;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            padding: 5px 5px 1px 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div style="width: 100%; height: 100%; ">
+        <div class="Toolbar">
+        <input type="image" src="../Images/Toolbars/zoomin.png" alt="Zoom In" onclick="cmdZoomin_Click();">
+        <input type="image" src="../Images/Toolbars/zoomout.png" alt="Zoom Out" onclick="cmdZoomout_Click();">
+        <input type="image" src="../Images/Toolbars/percentageblue.png" alt="Toggle blue percentages" onclick="cmdBluePercentages_Click();">
+        <input type="image" src="../Images/Toolbars/percentagegreen.png" alt="Toggle green percentages" onclick="cmdGreenPercentages_Click();">
+        <input type="image" src="../Images/Toolbars/percentagered.png" alt="Toggle red percentages" onclick="cmdRedPercentages_Click();">
+        <input type="image" src="../Images/Toolbars/tooltip.png" alt="Toggle tooltips" onclick="cmdToolTips_Click();">
+        <input type="image" src="../Images/Toolbars/help.png" alt="Help" onclick="cmdHelp_Click();">
+        </div>
+        
+        <div id="oActiveGantt" style="width: 100%; height: 100%; ">
+        </div>
+    </div>
+
+</body>
+</html>

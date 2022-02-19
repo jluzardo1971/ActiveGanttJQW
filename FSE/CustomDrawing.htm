@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ActiveGanttJQW - Custom Drawing</title>
+    <script src="../Scripts/jquery-2.0.3.js" type="text/javascript"></script>
+    <script src="../Scripts/jquery.ui.widget.js" type="text/javascript"></script>
+    <script src="../Scripts/AGJQW_3_2_0D.min.js" type="text/javascript"></script>
+
+    <script>
+
+        var ActiveGanttJQWCtl1;
+        var mp_oImage = new Image();
+
+        $(document).ready(function () {
+
+            $('#oActiveGantt').ActiveGanttJQWCtl();
+            ActiveGanttJQWCtl1 = $('#oActiveGantt').ActiveGanttJQWCtl("GetControl");
+            $('#oActiveGantt').ActiveGanttJQWCtl("option", "Draw_callback", ActiveGanttJQWCtl_Draw);
+
+            mp_oImage.src = "Images/sampleimage.jpg"
+
+
+            ActiveGanttJQWCtl1.ApplyTemplate(AGJQW.E_CONTROLTEMPLATE.STC_CH_HGRAD_BLUE_BELL, AGJQW.E_OBJECTTEMPLATE.STO_VARIATION_1);
+
+            var i = 0;
+            ActiveGanttJQWCtl1.Columns.Add("Column 1", "", 125, "");
+            ActiveGanttJQWCtl1.Columns.Add("Column 2", "", 100, "");
+            for (i = 1; i <= 10; i++)
+            {
+                ActiveGanttJQWCtl1.Rows.Add("K" + i, "Row " + i + " (Key: " + "K" + i + ")", true, true, "");
+            }
+
+            ActiveGanttJQWCtl1.CurrentViewObject.TimeLine.Position(new AGJQW.DateTime(2011, 11, 21, 0, 0, 0));
+            ActiveGanttJQWCtl1.Tasks.Add("Task 1", "K1", new AGJQW.DateTime(2011, 11, 21, 0, 0, 0), new AGJQW.DateTime(2011, 11, 21, 3, 0, 0), "", "RET1", "");
+            ActiveGanttJQWCtl1.Tasks.Add("Task 2", "K2", new AGJQW.DateTime(2011, 11, 21, 1, 0, 0), new AGJQW.DateTime(2011, 11, 21, 4, 0, 0), "", "RET1", "");
+            ActiveGanttJQWCtl1.Tasks.Add("Task 3", "K3", new AGJQW.DateTime(2011, 11, 21, 2, 0, 0), new AGJQW.DateTime(2011, 11, 21, 5, 0, 0), "", "RET1", "");
+
+            window.addEventListener('resize', mp_WindowResize, true);
+            mp_WindowResize();
+
+        });
+
+        function mp_WindowResize() {
+            $('#oActiveGantt').height(window.innerHeight - 60);
+            $('#oActiveGantt').ActiveGanttJQWCtl("Resize");
+        }
+
+        function ActiveGanttJQWCtl_Draw(sender, e) {
+            if (e.EventTarget == AGJQW.E_EVENTTARGET.EVT_TASK)
+            {
+                if (ActiveGanttJQWCtl1.SelectedTaskIndex == e.ObjectIndex)
+                {
+                    e.CustomDraw = true;
+                    var oTask;
+                    oTask = ActiveGanttJQWCtl1.Tasks.Item(e.ObjectIndex);
+                    var oFont = new AGJQW.Font("Arial", 7);
+                    var oTextFlags = new AGJQW.clsTextFlags();
+                    oTextFlags.HorizontalAlignment = AGJQW.GRE_HORIZONTALALIGNMENT.HAL_CENTER;
+                    oTextFlags.VerticalAlignment = AGJQW.GRE_VERTICALALIGNMENT.VAL_CENTER;
+                    ActiveGanttJQWCtl1.Drawing.PaintImage(mp_oImage, oTask.Left + 40, oTask.Top + 10, oTask.Left + 64, oTask.Top + 34);
+                    ActiveGanttJQWCtl1.Drawing.DrawLine(oTask.Left, ((oTask.Bottom - oTask.Top) / 2) + oTask.Top, oTask.Right, ((oTask.Bottom - oTask.Top) / 2) + oTask.Top, AGJQW.Color_FromArgb(255,0,255,0), AGJQW.GRE_LINEDRAWSTYLE.LDS_SOLID, 1);
+                    ActiveGanttJQWCtl1.Drawing.DrawRectangle(oTask.Left, oTask.Top, oTask.Left + 10, oTask.Top + 10, AGJQW.Color_FromArgb(255, 255, 0, 0), AGJQW.GRE_LINEDRAWSTYLE.LDS_SOLID, 1);
+                    ActiveGanttJQWCtl1.Drawing.DrawBorder(oTask.Left, oTask.Top, oTask.Right, oTask.Bottom, AGJQW.Color_FromArgb(255, 0, 0, 255), AGJQW.GRE_LINEDRAWSTYLE.LDS_SOLID, 2);
+                    ActiveGanttJQWCtl1.Drawing.DrawAlignedText(oTask.Left, oTask.Top, oTask.Right, oTask.Bottom, oTask.Text + " Is Selected", AGJQW.GRE_HORIZONTALALIGNMENT.HAL_RIGHT, AGJQW.GRE_VERTICALALIGNMENT.VAL_BOTTOM, AGJQW.Color_FromArgb(255, 0, 0, 255), oFont);
+                    ActiveGanttJQWCtl1.Drawing.DrawText(oTask.Left, oTask.Top, oTask.Right, oTask.Bottom, "Draw Text", oTextFlags, AGJQW.Color_FromArgb(255, 255, 0, 0), oFont);
+                }
+            }
+        }
+    
+    </script>
+
+
+</head>
+<body>
+
+    <div id="oActiveGantt" style="width: 100%; height: 100%; ">
+    </div>
+
+</body>
+</html>

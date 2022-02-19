@@ -1,0 +1,180 @@
+﻿$('#oActiveGantt').ActiveGanttJQWCtl("option", "ControlClick_callback", ActiveGanttJQWCtl_ControlClick);
+
+function ActiveGanttJQWCtl_ControlClick(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "ControlDblClick_callback", ActiveGanttJQWCtl_ControlDblClick);
+
+function ActiveGanttJQWCtl_ControlDblClick(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "ControlMouseDown_callback", ActiveGanttJQWCtl_ControlMouseDown);
+
+function ActiveGanttJQWCtl_ControlMouseDown(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "ControlMouseMove_callback", ActiveGanttJQWCtl_ControlMouseMove);
+
+function ActiveGanttJQWCtl_ControlMouseMove(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "ControlMouseUp_callback", ActiveGanttJQWCtl_ControlMouseUp);
+
+function ActiveGanttJQWCtl_ControlMouseUp(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "ControlMouseHover_callback", ActiveGanttJQWCtl_ControlMouseHover);
+
+function ActiveGanttJQWCtl_ControlMouseHover(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "ControlKeyDown_callback", ActiveGanttJQWCtl_ControlKeyDown);
+
+function ActiveGanttJQWCtl_ControlKeyDown(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "ControlKeyUp_callback", ActiveGanttJQWCtl_ControlKeyUp);
+
+function ActiveGanttJQWCtl_ControlKeyUp(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "ControlKeyPress_callback", ActiveGanttJQWCtl_ControlKeyPress);
+
+function ActiveGanttJQWCtl_ControlKeyPress(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "ControlScroll_callback", ActiveGanttJQWCtl_ControlScroll);
+
+function ActiveGanttJQWCtl_ControlScroll(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "Draw_callback", ActiveGanttJQWCtl_Draw);
+
+function ActiveGanttJQWCtl_Draw(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "PredecessorDraw_callback", ActiveGanttJQWCtl_PredecessorDraw);
+
+function ActiveGanttJQWCtl_PredecessorDraw(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "CustomTierDraw_callback", ActiveGanttJQWCtl_CustomTierDraw);
+
+function ActiveGanttJQWCtl_CustomTierDraw(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "CustomTickMarkAreaDraw_callback", ActiveGanttJQWCtl_CustomTickMarkAreaDraw);
+
+function ActiveGanttJQWCtl_CustomTickMarkAreaDraw(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "CustomTickMarkDraw_callback", ActiveGanttJQWCtl_CustomTickMarkDraw);
+
+function ActiveGanttJQWCtl_CustomTickMarkDraw(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "TickMarkTextDraw_callback", ActiveGanttJQWCtl_TickMarkTextDraw);
+
+function ActiveGanttJQWCtl_TickMarkTextDraw(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "TierTextDraw_callback", ActiveGanttJQWCtl_TierTextDraw);
+
+function ActiveGanttJQWCtl_TierTextDraw(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "ObjectAdded_callback", ActiveGanttJQWCtl_ObjectAdded);
+
+function ActiveGanttJQWCtl_ObjectAdded(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "ObjectSelected_callback", ActiveGanttJQWCtl_ObjectSelected);
+
+function ActiveGanttJQWCtl_ObjectSelected(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "BeginObjectChange_callback", ActiveGanttJQWCtl_BeginObjectChange);
+
+function ActiveGanttJQWCtl_BeginObjectChange(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "ObjectChange_callback", ActiveGanttJQWCtl_ObjectChange);
+
+function ActiveGanttJQWCtl_ObjectChange(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "EndObjectChange_callback", ActiveGanttJQWCtl_ObjectChange);
+
+function ActiveGanttJQWCtl_ObjectChange(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "CompleteObjectChange_callback", ActiveGanttJQWCtl_CompleteObjectChange);
+
+function ActiveGanttJQWCtl_CompleteObjectChange(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "ActiveGanttError_callback", ActiveGanttJQWCtl_ActiveGanttError);
+
+function ActiveGanttJQWCtl_ActiveGanttError(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "PredecessorException_callback", ActiveGanttJQWCtl_PredecessorException);
+
+function ActiveGanttJQWCtl_PredecessorException(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "NodeChecked_callback", ActiveGanttJQWCtl_NodeChecked);
+
+function ActiveGanttJQWCtl_NodeChecked(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "NodeExpanded_callback", ActiveGanttJQWCtl_NodeExpanded);
+
+function ActiveGanttJQWCtl_NodeExpanded(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "BeginTextEdit_callback", ActiveGanttJQWCtl_BeginTextEdit);
+
+function ActiveGanttJQWCtl_BeginTextEdit(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "EndTextEdit_callback", ActiveGanttJQWCtl_EndTextEdit);
+
+function ActiveGanttJQWCtl_EndTextEdit(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "TimeLineChanged_callback", ActiveGanttJQWCtl_TimeLineChanged);
+
+function ActiveGanttJQWCtl_TimeLineChanged(sender) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "ControlRedrawn_callback", ActiveGanttJQWCtl_ControlRedrawn);
+
+function ActiveGanttJQWCtl_ControlRedrawn(sender) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "ControlDraw_callback", ActiveGanttJQWCtl_ControlDraw);
+
+function ActiveGanttJQWCtl_ControlDraw(sender) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "ToolTipOnMouseHover_callback", ActiveGanttJQWCtl_ToolTipOnMouseHover);
+
+function ActiveGanttJQWCtl_ToolTipOnMouseHover(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "ToolTipOnMouseMove_callback", ActiveGanttJQWCtl_ToolTipOnMouseMove);
+
+function ActiveGanttJQWCtl_ToolTipOnMouseMove(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "OnMouseHoverToolTipDraw_callback", ActiveGanttJQWCtl_OnMouseHoverToolTipDraw);
+
+function ActiveGanttJQWCtl_OnMouseHoverToolTipDraw(sender, e) {
+}
+
+$('#oActiveGantt').ActiveGanttJQWCtl("option", "OnMouseMoveToolTipDraw_callback", ActiveGanttJQWCtl_OnMouseMoveToolTipDraw);
+
+function ActiveGanttJQWCtl_OnMouseMoveToolTipDraw(sender, e) {
+}
+
